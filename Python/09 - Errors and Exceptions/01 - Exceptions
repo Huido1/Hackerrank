@@ -1,0 +1,16 @@
+#url: https://www.hackerrank.com/challenges/exceptions/problem
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+n = int(input())
+
+for i in range(n):
+    a = input().split()
+    try:
+        int(a[0])/int(a[1])
+    except ZeroDivisionError as err:
+        print ("Error Code: integer division or modulo by zero")
+    except ValueError as err:
+        print ("Error Code:",err)
+    else:
+        print(int(int(a[0])/int(a[1])))
